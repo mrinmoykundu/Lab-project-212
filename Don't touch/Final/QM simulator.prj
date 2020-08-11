@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="2147868956" file="E:\Course Materials\Matlab 2-1\Project\Don't touch\Final\QM simulator.prj" location="E:\Course Materials\Matlab 2-1\Project\Don't touch\Final" name="QM simulator" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="2147868956" file="E:\git\Lab-project-212\Don't touch\Final\QM simulator.prj" location="E:\git\Lab-project-212\Don't touch\Final" name="QM simulator" target="target.mlapps" target-name="Package App">
     <param.appname>QM simulator</param.appname>
     <param.authnamewatermark>Mrinmoy Kundu, Aroni Ghosh</param.authnamewatermark>
     <param.email />
@@ -14,7 +14,7 @@
     <param.products.id />
     <param.products.version />
     <param.platforms />
-    <param.output>E:\Course Materials\Matlab 2-1\Project\Don't touch</param.output>
+    <param.output>E:\Course Materials</param.output>
     <param.guid>c22f165b-8d0c-4808-9ab1-e8f5b25b92ae</param.guid>
     <unset>
       <param.email />
@@ -103,7 +103,7 @@
     </fileset.resources>
     <fileset.package />
     <build-deliverables>
-      <file location="E:\Course Materials\Matlab 2-1\Project" name="Don't touch" optional="false">E:\Course Materials\Matlab 2-1\Project\Don't touch</file>
+      <file location="E:\" name="Course Materials" optional="false">E:\Course Materials</file>
     </build-deliverables>
     <workflow />
     <matlab>

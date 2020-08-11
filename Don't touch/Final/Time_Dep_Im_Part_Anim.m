@@ -17,7 +17,7 @@ for t = linspace(0,t_range,t_range*100)
     
     lim = max( abs(min(psi)) ,  abs(max(psi)) );
     
-    title(strcat('Real part of psi, t =', num2str(t), 'fs'));
+    title(strcat('Imaginary part of psi, t =', num2str(t), 'fs'));
     xlabel('x(nm)');
     ylabel('psi');
     

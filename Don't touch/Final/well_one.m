@@ -65,7 +65,7 @@ end
 function back_to_home_Callback(hObject, eventdata, handles)
 
 close(well_one)
-project1
+project_schrodinger
 
 
 

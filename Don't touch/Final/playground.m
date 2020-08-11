@@ -79,7 +79,7 @@ varargout{1} = handles.output;
 function home_Callback(hObject, eventdata, handles)
 
 close(playground)
-project1
+project_schrodinger
 
 % --- Executes on button press in config_pf.
 function config_pf_Callback(hObject, eventdata, handles)

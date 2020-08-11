@@ -1,10 +1,10 @@
-function varargout = project1(varargin)
+function varargout = project_schrodinger(varargin)
 
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @project1_OpeningFcn, ...
-                   'gui_OutputFcn',  @project1_OutputFcn, ...
+                   'gui_OpeningFcn', @project_schrodinger_OpeningFcn, ...
+                   'gui_OutputFcn',  @project_schrodinger_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -19,10 +19,10 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before project1 is made visible.
-function project1_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before project_schrodinger is made visible.
+function project_schrodinger_OpeningFcn(hObject, eventdata, handles, varargin)
 
-% Choose default command line output for project1
+% Choose default command line output for project_schrodinger
 handles.output = hObject;
 ah=axes('unit','normalized','position',[0 0 1 1]);
 
@@ -33,40 +33,29 @@ uistack(ah,'bottom')
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes project1 wait for user response (see UIRESUME)
+% UIWAIT makes project_schrodinger wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = project1_OutputFcn(hObject, eventdata, handles) 
+function varargout = project_schrodinger_OutputFcn(hObject, eventdata, handles) 
 
 varargout{1} = handles.output;
 
 
 % --- Executes on button press in one_well.
 function one_well_Callback(hObject, eventdata, handles)
-close(project1)
+close(project_schrodinger)
 well_one
 
 
 % --- Executes on button press in two_well.
 function two_well_Callback(hObject, eventdata, handles)
-close(project1)
+close(project_schrodinger)
 playground
 
 
 % --- Executes on button press in kronig.
 function kronig_Callback(hObject, eventdata, handles)
-close(project1)
+close(project_schrodinger)
 kronig_penny
-
-
-
-% --- Executes during object creation, after setting all properties.
-
-
-% --------------------------------------------------------------------
-function Untitled_1_Callback(hObject, eventdata, handles)
-% hObject    handle to Untitled_1 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
