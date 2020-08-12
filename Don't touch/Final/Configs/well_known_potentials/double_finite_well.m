@@ -1,10 +1,10 @@
-function varargout = config1_well2(varargin)
+function varargout = double_finite_well(varargin)
 
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @config1_well2_OpeningFcn, ...
-                   'gui_OutputFcn',  @config1_well2_OutputFcn, ...
+                   'gui_OpeningFcn', @double_finite_well_OpeningFcn, ...
+                   'gui_OutputFcn',  @double_finite_well_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -19,8 +19,8 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before config1_well2 is made visible.
-function config1_well2_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before double_finite_well is made visible.
+function double_finite_well_OpeningFcn(hObject, eventdata, handles, varargin)
 
 handles.output = hObject;
 
@@ -57,7 +57,7 @@ set(handles.barrier_width_base,'String',num2str(a1));
 set(handles.barrier_slider, 'value', a1);
 end
 
-function varargout = config1_well2_OutputFcn(hObject, eventdata, handles) 
+function varargout = double_finite_well_OutputFcn(hObject, eventdata, handles) 
 
 varargout{1} = handles.output;
 
@@ -65,7 +65,7 @@ varargout{1} = handles.output;
 % --- Executes on button press in close.
 function close_Callback(hObject, eventdata, handles)
 
-close(config1_well2)
+close(double_finite_well)
 
 % --- Executes on slider movement.
 function m_slider_Callback(hObject, eventdata, handles)

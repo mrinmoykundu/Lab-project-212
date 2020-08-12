@@ -26,9 +26,16 @@ function project_schrodinger_OpeningFcn(hObject, eventdata, handles, varargin)
 handles.output = hObject;
 ah=axes('unit','normalized','position',[0 0 1 1]);
 
-bg=imread('homepage_bg.jpg');imagesc(bg);
+bg=imread('Images/homepage_bg.jpg');imagesc(bg);
 set(ah,'handlevisibility','off','visible','off');
 uistack(ah,'bottom')
+
+
+% Adding path for different directories where Configs and Utils functions
+% resides
+addpath('Configs/playground')
+addpath('Configs/well_known_potentials')
+addpath('Utils')
 
 % Update handles structure
 guidata(hObject, handles);
@@ -46,7 +53,7 @@ varargout{1} = handles.output;
 % --- Executes on button press in one_well.
 function one_well_Callback(hObject, eventdata, handles)
 close(project_schrodinger)
-well_one
+well_known_potentials
 
 
 % --- Executes on button press in two_well.

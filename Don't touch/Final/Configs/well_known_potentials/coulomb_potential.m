@@ -1,10 +1,10 @@
-function varargout = config_4(varargin)
+function varargout = coulomb_potential(varargin)
 
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @config_4_OpeningFcn, ...
-                   'gui_OutputFcn',  @config_4_OutputFcn, ...
+                   'gui_OpeningFcn', @coulomb_potential_OpeningFcn, ...
+                   'gui_OutputFcn',  @coulomb_potential_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -19,15 +19,15 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before config_4 is made visible.
-function config_4_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before coulomb_potential is made visible.
+function coulomb_potential_OpeningFcn(hObject, eventdata, handles, varargin)
 
 handles.output = hObject;
 
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes config_4 wait for user response (see UIRESUME)
+% UIWAIT makes coulomb_potential wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
 a4=getappdata(0,'cons');
@@ -45,7 +45,7 @@ end
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = config_4_OutputFcn(hObject, eventdata, handles) 
+function varargout = coulomb_potential_OutputFcn(hObject, eventdata, handles) 
 
 varargout{1} = handles.output;
 
@@ -53,7 +53,7 @@ varargout{1} = handles.output;
 % --- Executes on button press in close.
 function close_Callback(hObject, eventdata, handles)
 
-close(config_4)
+close(coulomb_potential)
 
 % --- Executes on slider movement.
 function cons_slider_Callback(hObject, eventdata, handles)

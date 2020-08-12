@@ -24,7 +24,7 @@ function kronig_penny_OpeningFcn(hObject, eventdata, handles, varargin)
 handles.output = hObject;
 ah=axes('unit','normalized','position',[0 0 1 1]);
 
-bg=imread('bg.jpg');imagesc(bg);
+bg=imread('Images/bg.jpg');imagesc(bg);
 set(ah,'handlevisibility','off','visible','off');
 uistack(ah,'bottom')
 

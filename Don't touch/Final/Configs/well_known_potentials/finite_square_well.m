@@ -1,10 +1,10 @@
-function varargout = config1(varargin)
+function varargout = finite_square_well(varargin)
 
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @config1_OpeningFcn, ...
-                   'gui_OutputFcn',  @config1_OutputFcn, ...
+                   'gui_OpeningFcn', @finite_square_well_OpeningFcn, ...
+                   'gui_OutputFcn',  @finite_square_well_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -22,7 +22,7 @@ end
 
 
 % --- Executes just before config1 is made visible.
-function config1_OpeningFcn(hObject, eventdata, handles, varargin)
+function finite_square_well_OpeningFcn(hObject, eventdata, handles, varargin)
 handles.output = hObject;
 guidata(hObject, handles);
 
@@ -53,14 +53,14 @@ set(handles.perbase,'String',num2str(a1));
 set(handles.percentage_slider, 'value', a1);
 end
 
-function varargout = config1_OutputFcn(hObject, eventdata, handles) 
+function varargout = finite_square_well_OutputFcn(hObject, eventdata, handles) 
 varargout{1} = handles.output;
 
 
 % --- Executes on button press in close.
 function close_Callback(hObject, eventdata, handles)
 
-close(config1)
+close(finite_square_well)
 
 
 function width_slider_Callback(hObject, eventdata, handles)

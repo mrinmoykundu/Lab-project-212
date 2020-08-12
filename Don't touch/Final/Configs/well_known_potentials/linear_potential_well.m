@@ -1,17 +1,17 @@
-function varargout = config3(varargin)
-% CONFIG3 MATLAB code for config3.fig
-%      CONFIG3, by itself, creates a new CONFIG3 or raises the existing
+function varargout = linear_potential_well(varargin)
+% linear_potential_well MATLAB code for linear_potential_well.fig
+%      linear_potential_well, by itself, creates a new linear_potential_well or raises the existing
 %      singleton*.
 %
-%      H = CONFIG3 returns the handle to a new CONFIG3 or the handle to
+%      H = linear_potential_well returns the handle to a new linear_potential_well or the handle to
 %      the existing singleton*.
 %
-%      CONFIG3('CALLBACK',hObject,eventData,handles,...) calls the local
+%      linear_potential_well('CALLBACK',hObject,eventData,handles,...) calls the local
 %      function named CALLBACK in CONFIG3.M with the given input arguments.
 %
-%      CONFIG3('Property','Value',...) creates a new CONFIG3 or raises the
+%      linear_potential_well('Property','Value',...) creates a new linear_potential_well or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before config3_OpeningFcn gets called.  An
+%      applied to the GUI before linear_potential_well_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
 %      stop.  All inputs are passed to config3_OpeningFcn via varargin.
 %
@@ -28,10 +28,11 @@ function varargout = config3(varargin)
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @config3_OpeningFcn, ...
-                   'gui_OutputFcn',  @config3_OutputFcn, ...
+                   'gui_OpeningFcn', @linear_potential_well_OpeningFcn, ...
+                   'gui_OutputFcn',  @linear_potential_well_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
+ 
 if nargin && ischar(varargin{1})
     gui_State.gui_Callback = str2func(varargin{1});
 end
@@ -45,7 +46,7 @@ end
 
 
 % --- Executes just before config3 is made visible.
-function config3_OpeningFcn(hObject, eventdata, handles, varargin)
+function linear_potential_well_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -89,7 +90,7 @@ end
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = config3_OutputFcn(hObject, eventdata, handles) 
+function varargout = linear_potential_well_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -104,7 +105,7 @@ function pushbutton2_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton2 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-close(config3)
+close(linear_potential_well)
 
 % --- Executes on slider movement.
 function mslider_Callback(hObject, eventdata, handles)

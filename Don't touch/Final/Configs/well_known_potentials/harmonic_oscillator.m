@@ -1,10 +1,10 @@
-function varargout = config2(varargin)
+function varargout = harmonic_oscillator(varargin)
 
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
     'gui_Singleton',  gui_Singleton, ...
-    'gui_OpeningFcn', @config2_OpeningFcn, ...
-    'gui_OutputFcn',  @config2_OutputFcn, ...
+    'gui_OpeningFcn', @harmonic_oscillator_OpeningFcn, ...
+    'gui_OutputFcn',  @harmonic_oscillator_OutputFcn, ...
     'gui_LayoutFcn',  [] , ...
     'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -20,7 +20,7 @@ end
 
 
 % --- Executes just before config2 is made visible.
-function config2_OpeningFcn(hObject, eventdata, handles, varargin)
+function harmonic_oscillator_OpeningFcn(hObject, eventdata, handles, varargin)
 
 handles.output = hObject;
 
@@ -51,7 +51,7 @@ end
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = config2_OutputFcn(hObject, eventdata, handles)
+function varargout = harmonic_oscillator_OutputFcn(hObject, eventdata, handles)
 
 varargout{1} = handles.output;
 
@@ -59,7 +59,7 @@ varargout{1} = handles.output;
 % --- Executes on button press in close.
 function close_Callback(hObject, eventdata, handles)
 
-close(config2)
+close(harmonic_oscillator)
 
 % --- Executes on slider movement.
 function mslider_Callback(hObject, eventdata, handles)

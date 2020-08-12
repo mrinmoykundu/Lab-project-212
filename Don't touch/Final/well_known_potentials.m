@@ -1,10 +1,10 @@
-function varargout = well_one(varargin)
+function varargout = well_known_potentials(varargin)
 
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
     'gui_Singleton',  gui_Singleton, ...
-    'gui_OpeningFcn', @well_one_OpeningFcn, ...
-    'gui_OutputFcn',  @well_one_OutputFcn, ...
+    'gui_OpeningFcn', @well_known_potentials_OpeningFcn, ...
+    'gui_OutputFcn',  @well_known_potentials_OutputFcn, ...
     'gui_LayoutFcn',  [] , ...
     'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -19,13 +19,13 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before well_one is made visible.
-function well_one_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before well_known_potentials is made visible.
+function well_known_potentials_OpeningFcn(hObject, eventdata, handles, varargin)
 
 handles.output = hObject;
 ah=axes('unit','normalized','position',[0 0 1 1]);
 
-bg=imread('bg.jpg');imagesc(bg);
+bg=imread('Images/bg.jpg');imagesc(bg);
 set(ah,'handlevisibility','off','visible','off');
 uistack(ah,'bottom')
 
@@ -37,7 +37,7 @@ global h_bar ;
 h_bar = 0.659375; % eV fs
 global E_max;
 E_max = 10000;
-% Choose default command line output for well_one
+% Choose default command line output for well_known_potentials
 handles.output = hObject;
 
 % Update handles structure
@@ -46,7 +46,7 @@ guidata(hObject, handles);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = well_one_OutputFcn(hObject, eventdata, handles)
+function varargout = well_known_potentials_OutputFcn(hObject, eventdata, handles)
 
 varargout{1} = handles.output;
 
@@ -64,7 +64,7 @@ end
 % --- Executes on button press in back_to_home.
 function back_to_home_Callback(hObject, eventdata, handles)
 
-close(well_one)
+close(well_known_potentials)
 project_schrodinger
 
 
@@ -78,15 +78,15 @@ function config_pf_Callback(hObject, eventdata, handles)
 pop=get(handles.popupmenu2,'Value');
 
 if pop==1
-    config1
+    finite_square_well
 elseif pop==2
-    config2
+    harmonic_oscillator
 elseif pop==3
-    config3
+    linear_potential_well
 elseif pop==4
-    config_4
+    coulomb_potential
 elseif pop==5
-    config1_well2
+    double_finite_well
 elseif pop==6
     config_pt_potential
 elseif pop==7
@@ -333,3 +333,10 @@ function time_knob_slider_CreateFcn(hObject, eventdata, handles)
 if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor',[.9 .9 .9]);
 end
+
+
+% --- Executes on mouse press over axes background.
+function axes1_ButtonDownFcn(hObject, eventdata, handles)
+% hObject    handle to axes1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
